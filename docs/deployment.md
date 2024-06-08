@@ -14,14 +14,12 @@ On **EC2** Dashboard -> Lauch an instance
         #!/bin/bash
         echo "export VAR_NAME=value" >> /etc/profile
 
-
 Connect to instance -> SSH client
 
 - Open an SSH client.
 - Locate your private key file. The key used to launch this instance is <your_file_name>.pem
 - Run this command, if necessary, to ensure your key is not publicly viewable. `chmod 400 "<your_file_name>.pem"`
 - Connect to your instance using its Public DNS:
-ec2-54-163-18-122.compute-1.amazonaws.com
 
         ssh -i "<your_file_name>.pem" <your_instance_domain>
 
