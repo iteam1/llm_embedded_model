@@ -32,7 +32,7 @@ Create configuration file `sudo vim /etc/nginx/sites-enabled/fastpai_nginx` with
 
         server {
             listen 80;
-            server_name <your_public_server>;
+            server_name <your_ipv4_public_address>;
             location / {
                     proxy_pass http://127.0.0.1:8000;
                 }       
