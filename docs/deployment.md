@@ -28,7 +28,7 @@ Update and install dependences
         sudo apt-get update
         sudo apt install -y python3-pip nginx
 
-Create configuration file `sudo vim /etc/nginx/sites-enabled/fastpai_nginx` with these content bellow and save `:wd`
+Create configuration file `sudo vim /etc/nginx/sites-enabled/fastpai_nginx` with these content bellow and  press `Esc`, type `:w` and hit `Enter` key
 
         server {
             listen 80;
