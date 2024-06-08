@@ -41,3 +41,11 @@ Create configuration file `sudo vim /etc/nginx/sites-enabled/fastpai_nginx`
             }
 
 Enable the configuration: `sudo service nginx restart`
+
+Clone and install requirements `pip install -r requirements.txt --break-system-packages`
+
+Run app `python3 -m uvicorn main:app`
+
+Access the application via `http://<your_public_ip_address>/`
+
+Keep server running on EC2 instance after ssh is terminated `nohup bash your_server_script.sh &`
