@@ -23,7 +23,7 @@ Connect to instance -> SSH client
 - Connect to your instance using its Public DNS:
 ec2-54-163-18-122.compute-1.amazonaws.com
 
-        ssh -i "<your_file_name>.pem" ubuntu@ec2-54-163-18-122.compute-1.amazonaws.com
+        ssh -i "<your_file_name>.pem" <your_instance_domain>
 
 Update and install dependences
 
