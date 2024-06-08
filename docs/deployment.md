@@ -47,3 +47,7 @@ Run app `python3 -m uvicorn main:app`
 Access the application via `http://<your_public_ip_address>/`
 
 Keep server running on EC2 instance after ssh is terminated `nohup bash your_server_script.sh &`
+
+Identify the Process ID `ps aux | grep myscript.sh`
+
+Terminate the Process `kill 12345` or `kill -9 12345`
