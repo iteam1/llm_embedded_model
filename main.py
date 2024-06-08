@@ -11,9 +11,6 @@ LLM_MODEL = 'gpt-3.5-turbo'
 app = FastAPI()
 client = OpenAI()
 
-# Set your OpenAI API key here
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
 class OpenAIRequest(BaseModel):
     prompt: str
     max_tokens: int = 50
@@ -22,12 +19,12 @@ class OpenAIRequest(BaseModel):
 async def generate_text(request: OpenAIRequest):
     try:
         response = client.chat.completions.create(
-            model=LLM_MODEL,
-            prompt=request.prompt,
-            max_tokens=request.max_tokens,
-            temperature=0
-        )
-        return response
+            model = LLM_MODEL,
+            messages = [{'role':'user','content':request.prompt}],
+            max_tokens = request.max_tokens,
+            temperature = 0)
+
+        return response.choices[0].message.content
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
