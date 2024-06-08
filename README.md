@@ -12,4 +12,6 @@ An API-based application that communicates with a large language model over a ne
 
 # shout out to
 
+[nginx-docs](https://nginx.org/en/docs/)
+
 [alfredodeza/huggingface-deploy-azure](https://github.com/alfredodeza/huggingface-deploy-azure)
